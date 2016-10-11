@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>OLX\FluentWebDriverClient\Browser\BrowserDriverBuilder | Fluent WebDriver Client API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:OLX_FluentWebDriverClient_Browser_BrowserDriverBuilder" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Fluent WebDriver Client API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../OLX.html">OLX</a></li>
+                                        <li><a href="../../../OLX/FluentWebDriverClient.html">FluentWebDriverClient</a></li>
+                                        <li><a href="../../../OLX/FluentWebDriverClient/Browser.html">Browser</a></li>
+    
+                <li>BrowserDriverBuilder</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            BrowserDriverBuilder
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>BrowserDriverBuilder</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Provides a fluent interface for initializing Facebook RemoteWebDriver objects.</p>            <p>Usage:</p>
+
+<pre><code>$driver = (new BrowserDriverBuilder('http://localhost:4444/wd/hub'))
+    -&gt;withType('phantomjs')
+    -&gt;build()
+    -&gt;getRemoteWebDriver();
+</code></pre>
+</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $url)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withType">withType</a>(string $type)
+        
+                                            <p>Sets the given type and returns self.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withProxySettings">withProxySettings</a>(array $proxySettings)
+        
+                                            <p>Sets the given proxy settings and returns self.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withUrls">withUrls</a>(array $urls)
+        
+                                            <p>Sets the given urls and returns self.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withImplicitTimeout">withImplicitTimeout</a>(int $timeout)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withConnectionTimeout">withConnectionTimeout</a>(int $seconds)
+        
+                                            <p>Sets the given connection timeout and returns self.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withRequestTimeout">withRequestTimeout</a>(int $seconds)
+        
+                                            <p>Sets the given request timeout and returns self.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withExtraCapabilities">withExtraCapabilities</a>(array $capabilities)
+        
+                                            <p>Sets the given extra capabilities and returns self.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_build">build</a>()
+        
+                                            <p>Builds a Facebook RemoteWebDriver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Facebook\WebDriver\Remote\RemoteWebDriver">RemoteWebDriver</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRemoteWebDriver">getRemoteWebDriver</a>()
+        
+                                            <p>Returns the driver built during the call to build().</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../OLX/FluentWebDriverClient/Translator/UrlTranslator.html"><abbr title="OLX\FluentWebDriverClient\Translator\UrlTranslator">UrlTranslator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrlTranslator">getUrlTranslator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 54</div>
+        <code>                    
+    <strong>__construct</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">at line         line 61</div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withType">
+        <div class="location">at line         line 73</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withType</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given type and returns self.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withProxySettings">
+        <div class="location">at line         line 86</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withProxySettings</strong>(array $proxySettings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given proxy settings and returns self.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$proxySettings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withUrls">
+        <div class="location">at line         line 105</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withUrls</strong>(array $urls)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given urls and returns self.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$urls</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withImplicitTimeout">
+        <div class="location">at line         line 120</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withImplicitTimeout</strong>(int $timeout)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withConnectionTimeout">
+        <div class="location">at line         line 133</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withConnectionTimeout</strong>(int $seconds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given connection timeout and returns self.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withRequestTimeout">
+        <div class="location">at line         line 146</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withRequestTimeout</strong>(int $seconds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given request timeout and returns self.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withExtraCapabilities">
+        <div class="location">at line         line 159</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>withExtraCapabilities</strong>(array $capabilities)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given extra capabilities and returns self.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$capabilities</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_build">
+        <div class="location">at line         line 172</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr>
+    <strong>build</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds a Facebook RemoteWebDriver.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../OLX/FluentWebDriverClient/Exception/UnsupportedBrowserException.html"><abbr title="OLX\FluentWebDriverClient\Exception\UnsupportedBrowserException">UnsupportedBrowserException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRemoteWebDriver">
+        <div class="location">at line         line 201</div>
+        <code>                    <abbr title="Facebook\WebDriver\Remote\RemoteWebDriver">RemoteWebDriver</abbr>
+    <strong>getRemoteWebDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the driver built during the call to build().</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Facebook\WebDriver\Remote\RemoteWebDriver">RemoteWebDriver</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlTranslator">
+        <div class="location">at line         line 209</div>
+        <code>                    <a href="../../../OLX/FluentWebDriverClient/Translator/UrlTranslator.html"><abbr title="OLX\FluentWebDriverClient\Translator\UrlTranslator">UrlTranslator</abbr></a>
+    <strong>getUrlTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../OLX/FluentWebDriverClient/Translator/UrlTranslator.html"><abbr title="OLX\FluentWebDriverClient\Translator\UrlTranslator">UrlTranslator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFindWithWait | Fluent WebDriver Client API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:OLX_FluentWebDriverClient_Browser_Page_Element_Find_ElementFindWithWait" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">Fluent WebDriver Client API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../OLX.html">OLX</a></li>
+                                        <li><a href="../../../../../../OLX/FluentWebDriverClient.html">FluentWebDriverClient</a></li>
+                                        <li><a href="../../../../../../OLX/FluentWebDriverClient/Browser.html">Browser</a></li>
+                                        <li><a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page.html">Page</a></li>
+                                        <li><a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element.html">Element</a></li>
+                                        <li><a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find.html">Find</a></li>
+    
+                <li>ElementFindWithWait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ElementFindWithWait
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ElementFindWithWait</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Allows asynchronous assertions on elements.</p>            <p>Usage:</p>
+
+<pre><code>$browser-&gt;get($url)-&gt;getElement()-&gt;withId('the-id');
+    -&gt;wait(3)
+    -&gt;toBePresent()
+    -&gt;thenFind()
+    -&gt;asHtmlElement();
+</code></pre>
+</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(int $timeInSeconds, <a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find/ElementFinderInterface.html"><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFinderInterface">ElementFinderInterface</abbr></a> $elementFinder)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toBePresent">toBePresent</a>()
+        
+                                            <p>Asserts that the element exists in the DOM.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toBeVisible">toBeVisible</a>()
+        
+                                            <p>Asserts that the elements exists in the DOM and is visible to the user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toBeInvisible">toBeInvisible</a>()
+        
+                                            <p>Asserts that the element exists in the DOM and is not visible to the user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toBeClickable">toBeClickable</a>()
+        
+                                            <p>Asserts that the element exists in the DOM and is clickable by the user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toBeSelected">toBeSelected</a>()
+        
+                                            <p>Asserts that the element exists in the DOM and is selected.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find/ElementFinderInterface.html"><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFinderInterface">ElementFinderInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_thenFind">thenFind</a>()
+        
+                                            <p>Allows the retrieval of the selected element.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 32</div>
+        <code>                    
+    <strong>__construct</strong>(int $timeInSeconds, <a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find/ElementFinderInterface.html"><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFinderInterface">ElementFinderInterface</abbr></a> $elementFinder)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$timeInSeconds</td>
+                <td>Timeout in seconds</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find/ElementFinderInterface.html"><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFinderInterface">ElementFinderInterface</abbr></a></td>
+                <td>$elementFinder</td>
+                <td>Element finder</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBePresent">
+        <div class="location">at line         line 45</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+    <strong>toBePresent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Asserts that the element exists in the DOM.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\NoSuchElementException">NoSuchElementException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\TimeOutException">TimeOutException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBeVisible">
+        <div class="location">at line         line 59</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+    <strong>toBeVisible</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Asserts that the elements exists in the DOM and is visible to the user.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\NoSuchElementException">NoSuchElementException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\TimeOutException">TimeOutException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBeInvisible">
+        <div class="location">at line         line 73</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+    <strong>toBeInvisible</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Asserts that the element exists in the DOM and is not visible to the user.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\NoSuchElementException">NoSuchElementException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\TimeOutException">TimeOutException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBeClickable">
+        <div class="location">at line         line 87</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+    <strong>toBeClickable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Asserts that the element exists in the DOM and is clickable by the user.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\NoSuchElementException">NoSuchElementException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\TimeOutException">TimeOutException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBeSelected">
+        <div class="location">at line         line 101</div>
+        <code>                    <abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr>
+    <strong>toBeSelected</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Asserts that the element exists in the DOM and is selected.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\NoSuchElementException">NoSuchElementException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Facebook\WebDriver\Exception\TimeOutException">TimeOutException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_thenFind">
+        <div class="location">at line         line 121</div>
+        <code>                    <a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find/ElementFinderInterface.html"><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFinderInterface">ElementFinderInterface</abbr></a>
+    <strong>thenFind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows the retrieval of the selected element.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../OLX/FluentWebDriverClient/Browser/Page/Element/Find/ElementFinderInterface.html"><abbr title="OLX\FluentWebDriverClient\Browser\Page\Element\Find\ElementFinderInterface">ElementFinderInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
