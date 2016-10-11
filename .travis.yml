@@ -1,0 +1,39 @@
+sudo: required
+dist: trusty
+
+language: php
+services:
+  - docker
+php:
+  - 5.6
+before_install:
+  - sudo rm -rf ~/.nvm
+  - curl -sL "https://deb.nodesource.com/setup_6.x" | sudo -E bash -
+  - sudo apt-get install -y nodejs
+  - wget -O "$HOME/sami.phar" http://get.sensiolabs.org/sami.phar && chmod +x "$HOME/sami.phar"
+  - wget -O "$HOME/coveralls.phar" https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar && chmod +x "$HOME/coveralls.phar"
+install:
+  - composer install
+  - sudo npm install -g gitbook-cli
+before_script:
+  - wget -qO- "https://github.com/athena-oss/athena/archive/v${ATHENA_RELEASE}.tar.gz" | tar -xz -C $HOME && mv "$HOME/athena-${ATHENA_RELEASE}" "$HOME/athena"
+  - wget -qO- "https://github.com/athena-oss/plugin-php/archive/v${ATHENA_PHP_RELEASE}.tar.gz" | tar -xz -C $HOME && mv "$HOME/plugin-php-${ATHENA_PHP_RELEASE}" "$HOME/athena/plugins/php"
+  - ln -s "$TRAVIS_BUILD_DIR" "$HOME/athena/plugins/php" && touch $HOME/athena/plugins/base/athena.lock
+  - mkdir -p build/logs/
+script:
+  - "$HOME/athena/athena php unit . -f=athena.json --coverage-clover=build/logs/clover.xml"
+after_success:
+  - $HOME/sami.phar update docs/sami.php
+  - sed -i "s#/opt/tests/##" build/logs/clover.xml
+  - $HOME/coveralls.phar -v --exclude-no-stmt
+  - docs/publish_docs
+cache:
+  directories:
+    - "$(npm config get prefix)"
+    - $HOME/.composer/cache
+env:
+  global:
+    - ATHENA_RELEASE=0.5.0
+    - ATHENA_PHP_RELEASE=0.7.0
+    - ATHENA_SUDO_DISABLED=true
+    - secure: CkXAOJoVCQEBS9JOklhOhy1vpB9pAOVbZpVbvFZ0GtlIRVz4qqV9sQG/c/GlWquvpXikKyGCtIfzYBqpskwH42mRUxeMvGXKTgVpYopcz7u3r0n2TeL3DqS2eibPO+IMDUU4ajHcgY5I1Vtzs7AgMNkSfTvJN7y7fV3CIxxf4VSZFEckAKuE2w4fbHt9H4eXZfXcuNIaYMG/6iCbnnLVjgbJD1H7GK0siN1dKSOXoPriuYCVZfDK3OH/gCXFodb9g4PFIVuPRzjlOwbu2S+N9JIT0dEE4DyxdsGz/ns50mHYFOALrpy/l2c2ak91d8HyY+pmF6ibNANQibi0F76YzY7v5XGiCTVMVnut7hhxiGQp+QOpRARzQLGw9B2V0gC44V8wNG1AL8+SQDF/04EhpQWR5pocypIIgOOGz6b9RKExa37u/r1y0TswlykHVKx1MGCjigY4iQPhm6q7tSYfKlzt9oltosx3+mCsvd0UnfPuGhg0YmMA8axVu9seAdPWAdXHYBq2d8Gsgll66sbos1etgKQNj4gTBbR3yz065rpSS/OMvSxuIF5+XS2dNJFs6ORNC60lD9FMmMhVbqCRmeRYfFjEeWaGht22ZKTpsBfq9HHe8Mm/BDDoMLVO1YHgE7DLL6/bFE7W1U7iS/764rhWR7OxqDwBi75hz1pbl0k=
