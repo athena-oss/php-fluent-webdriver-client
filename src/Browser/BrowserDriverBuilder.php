@@ -1,6 +1,7 @@
 <?php
 namespace OLX\FluentWebDriverClient\Browser;
 
+use Facebook\WebDriver\Chrome\ChromeOptions;
 use OLX\FluentWebDriverClient\Exception\UnsupportedBrowserException;
 use OLX\FluentWebDriverClient\Translator\UrlTranslator;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
@@ -47,6 +48,11 @@ class BrowserDriverBuilder
 
     /** @var int */
     private $requestTimeout;
+
+    /**
+     * @var array
+     */
+    private $chromeOptions;
 
     /**
      * @param string $url
@@ -222,9 +228,14 @@ class BrowserDriverBuilder
     {
         switch ($browserType) {
             case 'chrome':
+                $chromeCaps = DesiredCapabilities::chrome();
+                $options = new ChromeOptions();
+
+                $options->addArguments($this->chromeOptions);
+                $chromeCaps->setCapability(ChromeOptions::CAPABILITY,$options);
+
                 return array_merge(
-                    DesiredCapabilities::chrome()->toArray(),
-                    $desiredCapabilities
+                    $chromeCaps->toArray(),$desiredCapabilities
                 );
             case 'firefox':
                 return array_merge(
