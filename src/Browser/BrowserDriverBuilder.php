@@ -168,6 +168,11 @@ class BrowserDriverBuilder
         return $this;
     }
 
+    public function withChromeOptionsArguments(array $arguments){
+        $this->chromeOptions = $arguments;
+        return $this;
+    }
+
     /**
      * Builds a Facebook RemoteWebDriver.
      *
