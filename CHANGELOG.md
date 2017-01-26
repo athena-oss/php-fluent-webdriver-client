@@ -2,6 +2,7 @@
 
 ### PHP Fluent WebDriver Client
 
+- Move Phake to a require-dev dependency
 - Increase Guzzle client to ^6.0
 
 ## 0.7.1 (January 25, 2017)
