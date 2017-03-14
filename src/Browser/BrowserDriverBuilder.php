@@ -62,6 +62,7 @@ class BrowserDriverBuilder
         $this->url = $url;
         $this->extraCapabilities = [];
         $this->urls = [];
+        $this->chromeOptions = [];
     }
 
     public function __destruct()
