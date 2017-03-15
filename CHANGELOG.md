@@ -1,3 +1,7 @@
+## 0.7.3 (March 15, 2017)
+
+- Avoid errors when Chrome Options are not provided to BrowserDriverBuilder
+
 ## 0.7.2 (January 26, 2017)
 
 ### PHP Fluent WebDriver Client
