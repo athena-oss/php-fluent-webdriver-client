@@ -70,4 +70,28 @@ class BrowserTest extends \PHPUnit_Framework_TestCase
             'secure' => $isSecure,
         ]);
     }
+
+    public function testCleanup_ShouldRebuildBrowserInstanceAfterCleanup() {
+
+        $path = "/page.html";
+        $pathTranslated = "http://domain/page.html";
+
+        // init internal webdriver
+        $this->browser->getCurrentPage();
+
+        /** @var UrlTranslator $anotherUrlTranslator */
+        $anotherUrlTranslator = \Phake::mock(UrlTranslator::class);
+        \Phake::when($anotherUrlTranslator)->get($path)->thenReturn($pathTranslated);
+        $anotherWebDriver = \Phake::mock(RemoteWebDriver::class);
+        \Phake::when($this->mockBrowserDriverBuilder)->getRemoteWebDriver()->thenReturn($anotherWebDriver);
+        \Phake::when($this->mockBrowserDriverBuilder)->getUrlTranslator()->thenReturn($anotherUrlTranslator);
+
+        $this->browser->cleanup();
+        $this->browser->get($path);
+
+        \Phake::verify($this->mockBrowserDriverBuilder, \Phake::times(2))->build();
+        $this->assertEquals($this->browser->getUrlTranslator(), $anotherUrlTranslator);
+        \Phake::verify($anotherWebDriver)->get($pathTranslated);
+
+    }
 }
