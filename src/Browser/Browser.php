@@ -385,7 +385,6 @@ class Browser implements BrowserInterface
         $this->sessionCookie        = null;
         $this->remoteWebDriver      = null;
         $this->urlTranslator        = null;
-        $this->remoteDriverBuilder  = null;
     }
 
     /**
